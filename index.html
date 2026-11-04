@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090d14">
+  <title>Tashkent Metro Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">M</span>
+      <span>
+        <strong>METRO TRACKER</strong>
+        <small>TASHKENT · UZBEKISTAN</small>
+      </span>
+    </a>
+    <span class="live-status">
+      <i></i> DEMO LIVE
+    </span>
+  </header>
+
+  <main>
+    <section class="heading">
+      <div>
+        <p class="eyebrow">PUBLIC TRANSPORT SYSTEM</p>
+        <h1>Metro network</h1>
+        <p class="subtitle">Схема движения поездов Ташкента</p>
+      </div>
+      <div class="clock" id="clock">--:--:--</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span>ЛИНИИ</span>
+        <strong>4</strong>
+      </div>
+      <div class="stat">
+        <span>СТАНЦИИ</span>
+        <strong>50+</strong>
+      </div>
+      <div class="stat">
+        <span>ПОЕЗДА</span>
+        <strong id="train-count">8</strong>
+      </div>
+    </section>
+
+    <section class="map-card">
+      <div class="map-header">
+        <div>
+          <h2>Схема метро</h2>
+          <p>Выберите станцию для просмотра</p>
+        </div>
+        <span class="map-label">SCHEMATIC MAP</span>
+      </div>
+
+      <div class="map-scroll">
+        <svg id="metro-map"
+             viewBox="0 0 700 570"
+             role="img"
+             aria-label="Схематическая карта метро Ташкента">
+
+          <g id="routes"></g>
+          <g id="stations"></g>
+          <g id="trains"></g>
+        </svg>
+      </div>
+
+      <div class="legend">
+        <span><i class="legend-dot red"></i> Чиланзарская</span>
+        <span><i class="legend-dot blue"></i> Узбекистанская</span>
+        <span><i class="legend-dot green"></i> Юнусабадская</span>
+        <span><i class="legend-dot gold"></i> Кольцевая</span>
+      </div>
+    </section>
+
+    <section class="station-card" id="station-card">
+      <div>
+        <p class="eyebrow">SELECTED STATION</p>
+        <h2 id="station-name">Выберите станцию</h2>
+        <p id="station-info">Нажмите на точку на карте метро</p>
+      </div>
+      <span class="station-arrow">↗</span>
+    </section>
+
+    <footer>
+      <span>TASHKENT METRO TRACKER</span>
+      <span>VERSION 0.1.0 · DEMO DATA</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
